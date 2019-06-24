@@ -1,5 +1,6 @@
 FROM ubuntu
 RUN apt-get update
+RUN apt-get -y install rsyslog
 RUN apt-get install -y tzdata -y
 RUN ln -fs /usr/share/zoneinfo/Europe/Budapest /etc/localtime
 RUN dpkg-reconfigure --frontend noninteractive tzdata
