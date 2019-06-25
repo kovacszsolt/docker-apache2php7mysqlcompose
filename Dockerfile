@@ -9,7 +9,7 @@ RUN apt-get install apache2 -y
 RUN apt-get install php-ssh2 -y
 RUN apt-get install php7.1 -y
 RUN apt-get install php-mysql -y
-RUN apt-get install php7.2-ldap -y
+RUN apt-get install php7.2-ldap php7.2-xml -y
 RUN apt-get install libapache2-mod-php -y
 RUN apt-get install curl php-cli php-mbstring git unzip -y
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
