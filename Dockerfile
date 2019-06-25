@@ -6,6 +6,7 @@ RUN ln -fs /usr/share/zoneinfo/Europe/Budapest /etc/localtime
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 RUN apt-get install mc -y
 RUN apt-get install apache2 -y
+RUN apt-get install php-ssh2 -y
 RUN apt-get install php7.1 -y
 RUN apt-get install php-mysql -y
 RUN apt-get install php7.2-ldap -y
