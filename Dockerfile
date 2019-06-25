@@ -14,5 +14,6 @@ RUN apt-get install libapache2-mod-php -y
 RUN apt-get install curl php-cli php-mbstring git unzip -y
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
 RUN export COMPOSER_ALLOW_SUPERUSER=1
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
